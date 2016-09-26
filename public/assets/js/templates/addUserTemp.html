@@ -1,0 +1,125 @@
+<div class="side-body padding-top">
+               
+  <div class="row">
+    <div class="card">
+      <div class="card-header">
+          <div class="card-title">
+          <div class="title">Add User</div>                                   
+          </div>
+      </div>
+      <div class="card-body">
+              <div class="alert alert-success fade in addedUser hide">
+              <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+              <strong>Success!</strong> User has been added successfully.
+              </div>
+              <div class="col-md-8">
+                <div class="form-group">
+                    <label for="fname">Name</label>
+                    <input type="text" class="form-control" maxlength="30" id="userNameInput" placeholder="Enter name.">
+                </div>
+                <div class="form-group">
+                    <label for="lname">Email</label>
+                    <input type="text" class="form-control" maxlength="30" id="emailInput" placeholder="Enter email.">
+                </div>                                 
+              </div>
+              <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="Gender">Gender</label>
+                            <div>
+                            <div class="radio3 radio-check radio-inline">
+                              <input type="radio" id="genderFemaleInput"  name="genderFemaleInput" value="option1" >
+                              <label for="genderFemaleInput">
+                                Female
+                              </label>
+                            </div>
+                            <div class="radio3 radio-check radio-success radio-inline">
+                              <input type="radio" id="genderMaleInput"  name="genderMaleInput" value="Male" checked="">
+                              <label for="genderMaleInput">
+                                Male
+                              </label>
+                            </div>                                         
+                          </div>
+                        </div>  
+                      <div class="form-group">
+                          <label for="Mobile">Profile Picture</label>
+                          <center>
+                           <img  id="avatar_pic" class="profilepic" src="/assets/images/user.png"  >                                       
+                          </center>
+                        
+                          <label for="exampleInputFile">Upload Picture</label>
+                          <form id="uploadForm"  enctype="multipart/form-data"    method="post">
+                            <input id="avatar" name="avatar" type="file" accept="image/*"  class="file upLoadImage" onchange="readURL(this);">
+                         </form>
+
+                        <p class="help-block">File should be .png format.</p>
+                          <script>
+                            function readURL(input) {
+                              if (input.files && input.files[0]) {
+                                var reader = new FileReader();
+                                reader.onload = function (e) {
+                                  $('#avatar_pic')
+                                  .attr('src', e.target.result)
+                                  .width(150)
+                                  .height(150);
+                                };
+                                reader.readAsDataURL(input.files[0]);
+                              }
+                            }
+                          </script>
+                    </div>                                
+              </div>
+        </div>
+   </div>
+  </div>  
+  <br>     
+  <div class="row">
+      <div class="card card-success">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="title"><i class="fa fa-user-secret"></i> Set Password</div>
+          </div>
+          <div class="clear-both"></div>
+        </div>
+        <div class="card-body no-padding">
+           <ul class="message-list">
+              <a href="#">
+                    <li>
+                        <div class="message-block">
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label">Password</label>
+                                <div class="col-sm-10">
+                                    <input type="password" maxlength="30" class="form-control" id="passwordInput" placeholder="Enter password.">
+                                    <span class"pull-left">Only letters and numbers allowed in password.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </a>
+              <a href="#">
+                <li>
+                <div class="message-block">
+                     <div class="form-group">
+                       <label for="inputEmail3" class="col-sm-2 control-label">Confirm Password</label>
+                       <div class="col-sm-10">
+                          <input type="password" class="form-control" maxlength="30" id="passwordInputConfirm" placeholder="Enter password ">
+                       </div>
+                     </div>
+                  </div>
+                </li>
+            </a>
+               
+          </ul>
+
+        </div>
+          </div>
+
+  </div>     
+  <br>
+  <div class="row">
+    <div class="col-md-12" style="margin-bottom:10px;">
+          <center><button type="submit" class="btn btn-md btn-primary submitUserButton">Submit User Details</button></center>
+    </div>                 
+  </div>     
+                            
+                   
+</div>

@@ -1,0 +1,21 @@
+{
+  "name": "USER",
+  "version": "1.0.0",
+  "description": "user creation updationand deletion application in express js",
+  "main": "ReastfullServer.js",
+  "dependencies": {
+    "bcrypt-nodejs": "^0.0.3",
+    "express": "^4.13.3",
+    "express-fileupload": "0.0.5",
+    "multer": "^1.1.0",
+    "mysql": "^2.10.2",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ReastfullServer.js"
+  },
+  "author": "isma",
+  "license": "ISC"
+}
